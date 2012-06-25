@@ -4,12 +4,14 @@ public class SecondComplementBinaryConversion implements NumberConversionAlgorit
 
 	@Override
 	public Object getSpecificNumber(double number) {
-		double numberOfBits = Math.log((int)Math.abs(number))/Math.log(2);
+		double numberOfBits = 0;
+		if(number != 0)
+			numberOfBits = Math.log((int)Math.abs(number))/Math.log(2);
 		String bits = Integer.toBinaryString((int)number);
 		int numberOfBitsInString = bits.length();
 		numberOfBits++;
 		numberOfBits = Math.abs(numberOfBits);
-		numberOfBits = (int) (Math.ceil(numberOfBits / 4d) * 4);
+		numberOfBits = Math.ceil((int) (Math.ceil(numberOfBits / 4d) * 4));
 		
 		int bitsNeeded = (int) (numberOfBits-numberOfBitsInString);
 		
