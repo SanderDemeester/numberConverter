@@ -4,7 +4,10 @@ public class HexadecialNumberConversion implements NumberConversionAlgoritmeInte
 
 	@Override
 	public Object getSpecificNumber(double number) {
-		return Integer.toHexString((int)number);
+		if(number>=0)
+			return Integer.toHexString((int)number);
+		else
+			return new String("NaN");
 	}
 
 	@Override
