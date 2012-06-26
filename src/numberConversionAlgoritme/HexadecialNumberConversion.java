@@ -4,8 +4,7 @@ public class HexadecialNumberConversion implements NumberConversionAlgoritmeInte
 
 	@Override
 	public Object getSpecificNumber(double number) {
-		// TODO Auto-generated method stub DRIVER CODE
-		return new String("FF FF FF FF");
+		return Integer.toHexString((int)number);
 	}
 
 	@Override
