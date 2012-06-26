@@ -7,7 +7,7 @@ public class SecondComplementBinaryConversion implements NumberConversionAlgorit
 		double numberOfBits = 0;
 		if(number != 0)
 			numberOfBits = Math.log((int)Math.abs(number))/Math.log(2);
-		String bits = Integer.toBinaryString((int)number);
+		String bits = Integer.toBinaryString((int)Math.abs(number));
 		int numberOfBitsInString = bits.length();
 		numberOfBits++;
 		numberOfBits = Math.abs(numberOfBits);
@@ -26,7 +26,7 @@ public class SecondComplementBinaryConversion implements NumberConversionAlgorit
 		}
 		number++;
 		b.insert(0, "1");
-		return b.toString() + Integer.toBinaryString(~(int)Math.abs(number));
+		return b.toString() + " " + Integer.toBinaryString(~(int)Math.abs(number));
 	}
 
 	@Override
