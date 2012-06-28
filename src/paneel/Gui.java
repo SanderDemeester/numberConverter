@@ -46,6 +46,9 @@ public class Gui extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		pack();
 		
+		setJMenuBar(new NumberConverterMenuBar());
+		
+		
 		layoutManager.setAutoCreateContainerGaps(true);
 		layoutManager.setAutoCreateGaps(true);
 	
