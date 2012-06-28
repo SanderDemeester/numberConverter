@@ -2,12 +2,20 @@ package paneel;
 
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.event.InputEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.ActionMap;
 import javax.swing.GroupLayout;
+import javax.swing.InputMap;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.KeyStroke;
+
+import actions.SetFocusAction;
 
 import numberConversionAlgoritme.BinaryNumberConversionAlgoritme;
 import numberConversionAlgoritme.DecimalConversionAlgoritme;
@@ -30,7 +38,10 @@ public class Gui extends JFrame{
 			new BinaryNumberConversionAlgoritme(), new HexadecialNumberConversion(),
 			new FirstComplementBinaryConversionAlgoritme(),new SecondComplementBinaryConversion(),
 			new FloatingPointNumberConversion()};
+	
 	public Gui(){
+		
+		Container cp = getContentPane();
 		for(int i = 0; i < 6; i++){
 			labels[i] = new JLabel(OPSCHRIFT[i]);
 			textfields[i] = new ControlInputFields(CONVERSION_ALGORITME[i]);
@@ -38,7 +49,6 @@ public class Gui extends JFrame{
 			textfields[i].addKeyListener((KeyListener)textfields[i].getInputVerifier());
 		}
 		
-		Container cp = getContentPane();
 		GroupLayout layoutManager =  new GroupLayout(cp);
 		cp.setPreferredSize(new Dimension(500, 200));
 		cp.setLayout(layoutManager);
@@ -104,6 +114,7 @@ public class Gui extends JFrame{
 						.addContainerGap(GroupLayout.DEFAULT_SIZE,Short.MAX_VALUE)
 						)
 						);
+		
 						}
 
 }

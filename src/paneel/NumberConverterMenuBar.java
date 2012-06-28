@@ -1,5 +1,7 @@
 package paneel;
 
+import java.awt.event.KeyEvent;
+
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -33,6 +35,10 @@ public class NumberConverterMenuBar extends JMenuBar{
 		
 		menu[1].add(menuItems[0]);
 		menu[1].add(menuItems[1]);
+		
+		menu[0].setMnemonic(KeyEvent.VK_B);
+		menu[1].setMnemonic(KeyEvent.VK_F);
+		
 	}
 
 }
