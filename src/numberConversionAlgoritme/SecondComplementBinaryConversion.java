@@ -26,7 +26,8 @@ public class SecondComplementBinaryConversion implements NumberConversionAlgorit
 		}
 		number++;
 		b.insert(0, "1");
-		return b.toString() + " " + Integer.toBinaryString(~(int)Math.abs(number));
+//		return b.toString() + " " + Integer.toBinaryString(~(int)Math.abs(number));
+		return b.toString();
 	}
 
 	@Override
